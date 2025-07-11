@@ -1,0 +1,23 @@
+.GalleryBook {
+  //background: #1e1e2f;       /* fundo escuro */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  //margin: 30px auto;         /* centraliza horizontalmente com margem */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.GalleryBook .parteSuperior h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: black;            /* rosa vibrante para destaque */
+  text-align: left;
+  padding: 10px;
+}
+
+.GalleryBook .livros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* centraliza cards */
+  gap: 25px;                /* espaçamento entre cards */
+}

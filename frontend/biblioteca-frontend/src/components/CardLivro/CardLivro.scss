@@ -1,0 +1,69 @@
+.card-livro {
+  padding: 10px;
+  margin: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s;
+  width: 250px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* centraliza horizontalmente */
+  justify-content: center;   /* centraliza verticalmente */
+  overflow: visible;
+  
+
+
+  img {
+  width: 300px;
+  border-radius: 10px;
+  height: 420px;
+  display: block;
+  object-fit: cover;        /* manter proporção, preencher área */
+  object-position: center;  /* centralizar a imagem */
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+  .parteSuperior {
+    width: 100%;        /* preenche largura do card */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  .parteInferior {
+    margin: 0;
+    padding: 0;
+  }
+
+  .parteInformacao {
+    display: flex;
+    align-items: center;       /* alinha verticalmente no centro */
+    justify-content: center;   /* centraliza horizontalmente */
+    gap: 8px;                  /* espaço entre os itens */
+    margin: 0;
+    padding: 0;                /* corrigido: padding não aceita auto */
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    //background-color: black;
+  }
+}
+.parteInferior h2,
+.parteInferior p {
+  margin: 0;
+  padding: 0;
+}
+
+.parteInferior h2 {
+  font-size: 20px; /* ou qualquer tamanho que desejar */
+  font-weight: bold; /* opcional para deixar mais destacado */
+  margin: 0; /* remove margens padrão, se quiser */
+  text-align: center;
+}
