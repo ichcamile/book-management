@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import CardLivro from '../CardLivro/CardLivro.jsx';
 import './GalleryBook.scss';
-
+import Slider from "react-slick";
 
 const livrosMock = [
   {
@@ -86,17 +86,29 @@ const livrosMock = [
   },
 ];
 
-export const GalleryBook = () => {
+export const GalleryBook = ({ livros = livrosMock }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
+
   return (
     <div className="GalleryBook">
-      <div className="parteSuperior">
-        <h2>Livros Populares</h2>
-      </div>
-      <div className="livros">
-        {livrosMock.map(livro => (
+      <h2>Livros Populares</h2>
+      <Slider {...settings}>
+        {livros.map((livro) => (
           <CardLivro key={livro.id} livro={livro} />
         ))}
-      </div>
+      </Slider>
     </div>
   );
-}
+};
