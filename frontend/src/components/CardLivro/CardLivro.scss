@@ -1,0 +1,87 @@
+.card-livro {
+  position: relative;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s;
+  width: 250px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  border: 2px solid transparent;
+  transition: border 0.2s;
+  background: #fff;
+
+  .parteSuperior {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  img {
+    width: 220px;
+    border-radius: 10px;
+    height: 320px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 2px solid transparent;
+    z-index: 1;
+  }
+
+  .parteInferior {
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    background: #fff;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .parteInformacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.parteInferior h2,
+.parteInferior p {
+  margin: 0;
+  padding: 0;
+}
+
+.parteInferior h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.card-livro.selecionado {
+  border: 3px solid #1976d2;
+  box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.15);
+}
+
+.card-livro.selecionado img {
+  border: 2px solid #1976d2;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.15);
+} 
